@@ -12,7 +12,7 @@ function auth(req, res, next) {
     }
 
     // Verify the token
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(token, process.env.SECRET_KEY);
 
     // Attach decoded user information to the request object
     req.user = decoded;
